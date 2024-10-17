@@ -1,3 +1,4 @@
+{{-- links --}}
 @php
     $links = [
         [
@@ -53,14 +54,16 @@
     ];
 @endphp
 
+{{-- header --}}
 <header>
     <nav>
         <div>
+            {{-- logo --}}
             <img src="/img/dc-logo.png" alt="DC">
         </div>
 
         <ul>
-
+            {{-- ciclo per lettura link --}}
             @foreach ($links as $link)
                 <li>
                     <a href="{{ $link['url'] }}">
@@ -68,7 +71,6 @@
                     </a>
                 </li>
             @endforeach
-
         </ul>
     </nav>
 </header>
