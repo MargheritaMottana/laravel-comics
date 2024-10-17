@@ -2,17 +2,52 @@
     $links = [
         [
             'url' => '/',
-            'label' => 'Home',
+            'label' => 'Characters',
+            'active' => false,
+        ],
+        [
+            'url' => '/',
+            'label' => 'Comics',
             'active' => true,
         ],
         [
-            'url' => '/chi-siamo',
-            'label' => 'Chi siamo',
-            'active' => true,
+            'url' => '/',
+            'label' => 'Movies',
+            'active' => false,
         ],
         [
-            'url' => '/contatti',
-            'label' => 'Contatti',
+            'url' => '/',
+            'label' => 'TV',
+            'active' => false,
+        ],
+        [
+            'url' => '/',
+            'label' => 'Games',
+            'active' => false,
+        ],
+        [
+            'url' => '/',
+            'label' => 'Collectibles',
+            'active' => false,
+        ],
+        [
+            'url' => '/',
+            'label' => 'Videos',
+            'active' => false,
+        ],
+        [
+            'url' => '/',
+            'label' => 'Fans',
+            'active' => false,
+        ],
+        [
+            'url' => '/',
+            'label' => 'News',
+            'active' => false,
+        ],
+        [
+            'url' => '/',
+            'label' => 'Shop',
             'active' => false,
         ],
     ];
@@ -20,20 +55,20 @@
 
 <header>
     <nav>
+        <div>
+            {{-- <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt=""> --}}
+        </div>
+
         <ul>
+
             @foreach ($links as $link)
                 <li>
-                    @if ($link['active'])
-                        <a href="{{ $link['url'] }}">
-                            {{ $link['label'] }}
-                        </a>
-                    @else
-                        <del>
-                            {{ $link['label'] }}
-                        </del>
-                    @endif
+                    <a href="{{ $link['url'] }}">
+                        {{ $link['label'] }}
+                    </a>
                 </li>
             @endforeach
+
         </ul>
     </nav>
 </header>
