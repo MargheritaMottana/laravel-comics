@@ -25,20 +25,20 @@
     </div>
 
     {{-- sezione banner blu --}}
-    {{-- <div>
+    <div>
         <ul>
-            @foreach ($collection as $item)
+            @foreach ($iconLinks as $item)
             <li>
                 <div>
-                    <img src="" alt="">
+                    <img src="{{$item['img']}}" alt="{{$item['name']}}">
                 </div>
                 <span>
-                    inserire titolo
+                    {{$item['name']}}
                 </span>
             </li>
                 
             @endforeach
         </ul>
-    </div> --}}
+    </div>
 
 @endsection
