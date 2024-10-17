@@ -56,21 +56,24 @@
 
 {{-- header --}}
 <header>
-    <nav>
-        <div>
-            {{-- logo --}}
-            <img src="/img/dc-logo.png" alt="DC">
-        </div>
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
 
-        <ul>
-            {{-- ciclo per lettura link --}}
-            @foreach ($links as $link)
-                <li>
-                    <a href="{{ $link['url'] }}">
-                        {{ $link['label'] }}
-                    </a>
-                </li>
-            @endforeach
-        </ul>
-    </nav>
+            {{-- logo --}}
+            <img class="logo" src="/img/dc-logo.png" alt="DC">
+
+            <div>
+                <ul>
+                    {{-- ciclo per lettura link --}}
+                    @foreach ($links as $link)
+                        <li>
+                            <a class="header-link" href="{{ $link['url'] }}">
+                                {{ $link['label'] }}
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    </div>
 </header>

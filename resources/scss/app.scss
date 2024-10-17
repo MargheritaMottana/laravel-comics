@@ -1,1 +1,115 @@
 @import "~bootstrap/scss/bootstrap";
+
+* {
+    font-family: sans-serif;
+}
+
+// header
+header {
+    .logo {
+        width: 60px;
+        padding: 20px 0;
+    }
+
+    li .header-link {
+        font-weight: bold;
+        font-size: 0.9rem;
+        color: rgb(67, 67, 67);
+        padding-bottom: 45px;
+        transition: color 0.3s ease-in-out;
+
+        &.active,
+        &:hover {
+            color: #0082F9;
+            border-bottom: 4px solid #0082F9;
+        }
+    }
+}
+
+
+
+// main
+main {
+
+    // jumbo
+    .jumbo {
+        height: 300px;
+        background-image: url('img/jumbotron.jpg');
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+    }
+
+    // prodotti
+    .product-container {
+        position: relative;
+
+        .section-label {
+            color: white;
+            background-color: #0082F9;
+            position: absolute;
+            left: 0;
+            top: -25px;
+        }
+
+        .img-container {
+            width: 150px;
+            height: 150px;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .card-title {
+            font-size: 0.8rem;
+        }
+
+        .load-more-button {
+            color: white;
+            background-color: #0082F9;
+            border: none;
+
+            &:hover {
+                color: #0082F9;
+                background-color: white;
+            }
+        }
+    }
+
+    // fascia blu
+    .product-text {
+        font-size: 0.8rem;
+    }
+
+    .product-img {
+        height: 35px;
+    }
+}
+
+
+
+// general
+.bg-blue {
+    background-color: #0082F9;
+}
+
+a {
+    text-decoration: none;
+    padding: 10px;
+}
+
+ul {
+    padding: 0;
+
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+}
