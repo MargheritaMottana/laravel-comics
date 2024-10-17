@@ -1,14 +1,27 @@
+{{-- estendo la pagina ad app --}}
 @extends('layouts.app')
 
+{{-- nello yield collego il titolo con la sezione --}}
 @section('page-title', '| Comics')
 
 @section('main-content')
 
-<h1>
-    Hellou
-</h1>
+    <div class="row">
 
-<h2>
+        {{-- ciclo per leggere tutti i fumetti --}}
+        @foreach ($comics as $comic)
 
-</h2>
+            <div class="col-2">
+                <div>
+                    <img src="{{ $comic['thumb']}}" :alt="{{ $comic['title']}}">
+                </div>
+                <h4>
+                    {{ $comic['title']}}
+                </h4>
+
+            </div>
+            
+        @endforeach
+    </div>
+
 @endsection

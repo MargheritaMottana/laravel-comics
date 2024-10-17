@@ -56,7 +56,7 @@
 <header>
     <nav>
         <div>
-            {{-- <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt=""> --}}
+            <img src="/img/dc-logo.png" alt="DC">
         </div>
 
         <ul>
